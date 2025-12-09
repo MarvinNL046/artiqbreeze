@@ -1,7 +1,9 @@
+[build]
+  # Runs Convex deploy (backend) and then the frontend build
+  command = "npx convex deploy --cmd 'npm run build'"
+  publish = "dist"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-[context.production]
-  command = "npx convex deploy --cmd 'npm run build'"

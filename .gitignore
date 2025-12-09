@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.stripe-cli/
+stripe_*.tar.gz
 
 # Editor directories and files
 .vscode/*

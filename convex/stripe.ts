@@ -93,7 +93,7 @@ export const UNAUTH_getDefaultPlan = internalQuery({
       .withIndex("key", (q) => q.eq("key", PLANS.FREE))
       .unique();
   },
-});
+}) as any;
 
 export const PREAUTH_getUserByCustomerId = internalQuery({
   args: {
@@ -236,7 +236,9 @@ export const PREAUTH_createFreeStripeSubscription = internalAction({
     currency: currencyValidator,
   },
   handler: async (ctx, args) => {
-    const plan = await ctx.runQuery(internal.stripe.UNAUTH_getDefaultPlan);
+    const plan = await ctx.runQuery(
+      (internal as any).stripe.UNAUTH_getDefaultPlan,
+    );
     if (!plan) {
       throw new Error(ERRORS.STRIPE_SOMETHING_WENT_WRONG);
     }

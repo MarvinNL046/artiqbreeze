@@ -2,13 +2,13 @@
  * Centralized site configuration, add whatever you need here.
  */
 export default {
-  siteTitle: "Convex SaaS",
+  siteTitle: "Artiq Breeze | HVAC Operations",
   siteDescription:
-    "A Lightweight, Production-Ready Convex Stack for your next SaaS Application.",
-  siteUrl: "https://convex.dev",
+    "Artiq Breeze is the HVAC operations platform powered by Artiq CRM. Smart scheduling, F-gas compliance, and field ops in one stack.",
+  siteUrl: "https://artiqbreeze.com",
   siteImage: "/images/og-image.png",
   favicon: "/favicon.ico",
   twitterHandle: "",
-  email: "",
+  email: "hello@artiqbreeze.com",
   address: "",
 };
