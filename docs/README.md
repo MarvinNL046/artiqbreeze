@@ -132,6 +132,12 @@ Done! Now we can start receiving Stripe Events to your deployed app.
 
 Follow the Convex guide for Netlify deployment: https://docs.convex.dev/production/hosting/netlify
 
+For this project ensure these env vars are set in Netlify before triggering a deploy:
+
+- `CONVEX_DEPLOY_KEY`
+- `CONVEX_DEPLOYMENT` (e.g. `dev:different-kudu-318` or your prod slug)
+- `VITE_CONVEX_URL`
+
 ## Done! 🎉
 
 That's it! You've successfully deployed your Convex SaaS application.
